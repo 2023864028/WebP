@@ -360,3 +360,27 @@ dt><i>Texas</i></dt>
 audio src="national_anthem.mp3" controls></audio>
 </body>
 </html>
+
+## 실습문제 8
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자기 소개</title>
+</head>
+<body>
+    <h3>자기 소개</h3>
+    <hr>
+    <p>
+        안녕하세요 제 이름은 빅버드예요. 저는 세스미 스트리트에<br>
+        살고 있어요. 저는 편지를 배달하는 일을 해요. 반가운 소식을<br>
+        여러분에게 전해 주죠. 그리고 오늘, 희망의 기쁜 소식을 여러<br>
+        분에게 전해주려고 해요. 명품 HTML5 CSS3 웹프로그래밍! 정<br>
+        말 멋진 책이지 않아요? 호호호... 다음에 또 봐요. 안녕~~
+    </p>
+    
+
+<video src="self_intro.mp4" controls width="400"></video>
+</body>
+</html>
