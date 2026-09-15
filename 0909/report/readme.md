@@ -1,3 +1,5 @@
+오픈챌린지 02
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -63,6 +65,8 @@
 </body>
 </html>
 
+실습문제 1
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -78,8 +82,8 @@
         양두종 님의 산길이란 시에 곡을 붙인 박태준의 가곡&#9834;이 생각이 났다.
     </p>
     
-    <!-- 시 부분은 들여쓰기와 줄바꿈을 위해 스타일과 <br> 태그를 사용했습니다. -->
-    <p style="margin-left: 40px;">
+   
+<p style="margin-left: 40px;">
         산길을 간다. 말없이<br>
         호올로 산길을 간다<br>
         <br>
@@ -90,7 +94,7 @@
         밤에 홀로 산길을 간다
     </p>
     
-    <hr>
+<hr>
     <p>
         &copy; Copyright(c) 황기태 All rights reserved. &#9742; 010-0000-9999
     </p>
