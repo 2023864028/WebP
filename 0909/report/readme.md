@@ -1,4 +1,4 @@
-오픈챌린지 02
+## 오픈챌린지 02
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -65,7 +65,7 @@
 </body>
 </html>
 
-실습문제 1
+## 실습문제 1
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -113,7 +113,7 @@
 
 ☎ (전화기 기호): &#9742;
 
-실습문제 2 (1)
+## 실습문제 2 (1)
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -137,7 +137,7 @@ dt><i>Texas</i></dt>
 </body>
 </html>
 
-실습문제 2 (2)
+## 실습문제 2 (2)
 
 <!DOCTYPE html>
 <html lang="ko">
