@@ -294,3 +294,47 @@ dt><i>Texas</i></dt>
     </ul>
 </body>
 </html>
+
+## 실습문제 6
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>웹 프로그래밍 참조 사이트</title>
+</head>
+<body>
+    <h3>웹 프로그래밍 참조 사이트</h3>
+    <hr>
+    
+   
+<iframe src="left_menu.html" width="250" height="400"></iframe>
+    
+  
+<iframe name="right_view" width="500" height="400"></iframe>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>메뉴</title>
+</head>
+<body>
+    <h4>웹 프로그래밍 참조 사이트</h4>
+    <ul>
+       
+<li>
+            <a href="https://www.w3.org/wiki/CSS/Properties/color/keywords" target="right_view">CSS 색깔 이름과 값</a>
+        </li>
+        <li>
+            <a href="https://dev.w3.org/html5/html-author/charref" target="right_view">문자 엔터티 코드 사이트</a>
+        </li>
+        <li>
+            <a href="http://www.webprogramming.co.kr" target="right_view">웹프로그래밍 사이트</a>
+        </li>
+    </ul>
+</body>
+</html>
