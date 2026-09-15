@@ -156,4 +156,29 @@ dt><i>Texas</i></dt>
 </body>
 </html>
 
+## 실습문제 3
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>나의 셀카</title>
+</head>
+<body>
+    <h3>나의 셀카</h3>
+    <hr>
+    
+ 
+<table>
+        <caption>나의 셀카</caption>
+        <tr>
+         
+<td><img src="sponge.png" alt="스폰지밥" width="150"></td>
+            <td><img src="squid.png" alt="징징이" width="150"></td>
+            <td><img src="patrick.png" alt="뚱이" width="150"></td>
+        </tr>
+    </table>
+</body>
+</html>
+
 
