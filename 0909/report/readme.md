@@ -181,4 +181,89 @@ dt><i>Texas</i></dt>
 </body>
 </html>
 
+## 실습문제 4 (1)
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>학생 신체 검사</title>
+</head>
+<body>
+    <h3>신체 검사</h3>
+    <hr>
+    <table border="1">
+        <caption>학생 신체 검사 표</caption>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>키</th>
+                <th>체중</th>
+                <th>시력</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>황기태</td>
+                <td>179</td>
+                <td>67</td>
+                <td>1.0</td>
+            </tr>
+            <tr>
+                <td>이재문</td>
+                <td>177</td>
+                <td>77</td>
+                <td>2.0</td>
+            </tr>
+            <tr>
+                <td>정인환</td>
+                <td>189</td>
+                <td>87</td>
+                <td>1.2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>평균</th>
+                <td>181</td>
+                <td>77</td>
+                <td>1.3</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+
+## 실습문제 4 (2)
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>과일 수입</title>
+</head>
+<body>
+    <h3>과일 수입</h3>
+    <hr>
+    
+<table border="1">
+        <caption>과일 수입 표</caption>
+        <tr>
+            <th>사과</th>
+            <th>바나나</th>
+            <th>망고</th>
+        </tr>
+        <tr>
+            
+<td><img src="apple.jpg" alt="사과" width="100"></td>
+            <td><img src="banana.jpg" alt="바나나" width="100"></td>
+            <td><img src="mango.jpg" alt="망고" width="100"></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">페루</td>
+            <td style="text-align: center;">필리핀</td>
+            <td style="text-align: center;">호주</td>
+        </tr>
+    </table>
+</body>
+</html>
