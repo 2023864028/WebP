@@ -100,3 +100,60 @@
     </p>
 </body>
 </html>
+
+15° (도): &deg;
+
+½ (분수): &frac12;
+
+↰ (꺾인 화살표): &lsh;
+
+♪ (음표): &#9834;
+
+© (저작권 기호): &copy;
+
+☎ (전화기 기호): &#9742;
+
+실습문제 2 (1)
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>도시 소개</title>
+</head>
+<body>
+    <h3>도시 소개</h3>
+    <hr>
+    <dl>
+        <dt><i>California</i></dt>
+        <dd>맑고 화창한 날씨가 좋고 태평양의 아름다운 해변을 가진 멋진 주</dd>
+        
+<dt><i>Florida</i></dt>
+        <dd>미국의 동남부에 위치한 주로서 많은 휴양 도시가 있고 미국의 최남단이 연결된 아름다운 주</dd>
+        
+dt><i>Texas</i></dt>
+        <dd>드넓은 목장들이 있어 텍사스 바베큐로 유명하고 석유가 생산되는 주</dd>
+    </dl>
+</body>
+</html>
+
+실습문제 2 (2)
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>살빼는 방법</title>
+</head>
+<body>
+    <h3>살빼는 방법</h3>
+    <hr>
+    <ul>
+        <li><u>고기를 많는 먹는 고기 다이어트</u></li>
+        <li><u>채소를 많이 먹는 채소 다이어트</u></li>
+        <li><u>적게 먹고 운동하는 운동 다이어트</u></li>
+    </ul>
+</body>
+</html>
+
+
