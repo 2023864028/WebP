@@ -274,7 +274,7 @@ dt><i>Texas</i></dt>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>웹 프로그래밍 참조</title>
+ 
 </head>
 <body>
     <h3>웹 프로그래밍 참조 사이트</h3>
@@ -301,7 +301,7 @@ dt><i>Texas</i></dt>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>웹 프로그래밍 참조 사이트</title>
+  
 </head>
 <body>
     <h3>웹 프로그래밍 참조 사이트</h3>
@@ -320,7 +320,7 @@ dt><i>Texas</i></dt>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>메뉴</title>
+  
 </head>
 <body>
     <h4>웹 프로그래밍 참조 사이트</h4>
