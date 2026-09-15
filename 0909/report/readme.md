@@ -4,7 +4,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>컴퓨터 기술 소개</title>
+  
 </head>
 <body>
     <h2>스마트폰</h2>
@@ -119,7 +119,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>도시 소개</title>
+    
 </head>
 <body>
     <h3>도시 소개</h3>
@@ -143,7 +143,7 @@ dt><i>Texas</i></dt>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>살빼는 방법</title>
+    
 </head>
 <body>
     <h3>살빼는 방법</h3>
@@ -162,7 +162,7 @@ dt><i>Texas</i></dt>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>나의 셀카</title>
+  
 </head>
 <body>
     <h3>나의 셀카</h3>
@@ -187,7 +187,7 @@ dt><i>Texas</i></dt>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>학생 신체 검사</title>
+  
 </head>
 <body>
     <h3>신체 검사</h3>
@@ -240,7 +240,7 @@ dt><i>Texas</i></dt>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>과일 수입</title>
+   
 </head>
 <body>
     <h3>과일 수입</h3>
