@@ -71,7 +71,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>산길</title>
+    
 </head>
 <body>
     <h3>산길</h3>
