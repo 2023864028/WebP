@@ -338,3 +338,25 @@ dt><i>Texas</i></dt>
     </ul>
 </body>
 </html>
+
+## 실습문제 7
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <h3>애국가 가사</h3>
+    <hr>
+    <p>
+        동해물과 백두산이 마르고 닳도록 하나님이<br>
+        보우하사 우리나라 만세 무궁화 삼천리 화려<br>
+        강산 대한사람 대한으로 길이 보전하세.
+    </p>
+    
+  
+audio src="national_anthem.mp3" controls></audio>
+</body>
+</html>
