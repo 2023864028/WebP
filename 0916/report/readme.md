@@ -8,20 +8,20 @@
 </head>
 <body>
 
-    <!-- 헤더 영역 -->
-    <header>
-        <h2>스마트폰</h2>
+ 
+   <header>
+       <h2>스마트폰</h2>
         <p>스마트폰은 컴퓨터를 결합한 무선 휴대전화기이다. PC에서 실행되는 운영체제보다 작게 만든 모바일 운영체제를 탑재하여 인터넷 검색, 전자우편, 간단한 문서 편집, 카메라, 오디오 및 비디오 재생 등 PC의 기능을 거의 모두 갖추고 있다.</p>
-        <!-- 오디오 태그 (실제 파일이 없으므로 컨트롤러만 표시됩니다) -->
-        <audio src="media/audio.mp3" controls></audio>
-    </header>
+       
+       <audio src="media/audio.mp3" controls></audio>
+   </header>
 
     <hr>
 
-    <!-- 네비게이션 영역 -->
-    <nav>
-        <h3>목차</h3>
-        <ul>
+  
+   <nav>
+        h3>목차</h3>
+       <ul>
             <li><a href="#history">역사</a></li>
             <li><a href="#android">안드로이드폰</a></li>
             <li><a href="#iphone">아이폰</a></li>
@@ -31,8 +31,8 @@
 
     <hr>
 
-    <!-- 본문 섹션 영역 -->
-    <section>
+    
+   <section>
         <!-- 아티클 1: 역사 -->
         <article id="history">
             <h3>역사</h3>
@@ -61,8 +61,8 @@
 
     <hr>
 
-    <!-- 푸터 영역 -->
-    <footer>
+   
+   <footer>
         <p><a href="survey3.html" target="_blank">설문조사</a></p>
         <p>Copyright 2022 by Kitae</p>
     </footer>
