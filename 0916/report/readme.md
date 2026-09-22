@@ -149,3 +149,109 @@
 
 ## 실습문제 03
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <h3>로그인 폼</h3>
+    <hr>
+    
+  <form action="#">
+        <fieldset>
+            <legend>Login</legend>
+            
+  <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+            
+  <label for="password">Password</label>
+         
+  <input type="password" id="password" name="password">
+        </fieldset>
+    </form>
+</body>
+</html>
+
+## 실습문제 04
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>웹 프로그래밍 개요</title>
+</head>
+<body>
+    <h3>웹 프로그래밍 개요</h3>
+    <hr>
+    
+ <details>
+        <summary>웹의 기본 목적</summary>
+        <p>웹의 기본 목적은 한 컴퓨터에서 만든 문서(document)를 다른 컴퓨터에서 쉽게 볼 수 있도록 하는 것이다</p>
+    </details>
+    
+ <details>
+        <summary>왜 Web인가?</summary>
+        <p>전 세계의 컴퓨터들을 인터넷으로 거미줄처럼 연결하고 웹 문서를 쉽게 주고받을 수 있도록 시스템을 만들고 WWW(World Wide Web), 간단히 줄여 웹(Web)이라고 부른다.</p>
+    </details>
+    
+   
+ <details>
+        <summary>웹 페이지를 구성하는 3 요소</summary>
+        <ul>
+            <li>HTML - 문서의 구조와 내용</li>
+            <li>CSS(Cascading Style Sheet) - 문서의 모양</li>
+            <li>Javascript - 행동 및 응용 프로그램</li>
+        </ul>
+    </details>
+
+</body>
+</html>
+
+## 실습문제 05
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <h3>도형 서식 폼 만들기</h3>
+    <hr>
+    
+  <form action="#">
+      <fieldset>
+            <legend>도형 서식 입력</legend>
+            
+            
+  <p>
+                <label for="line-type">선종류</label>
+                <select id="line-type" name="lineType" size="3">
+                    <option value="none">선없음</option>
+                    <option value="solid">실선</option>
+                    <option value="dotted">점선</option>
+                </select>
+            </p>
+            
+        
+   <p>
+                <label for="line-weight">선두께</label>
+                <input type="number" id="line-weight" name="lineWeight">
+                
+  <label for="line-color">선색</label>
+               
+  <input type="color" id="line-color" name="lineColor" value="#4A90E2">
+            </p>
+            
+     
+ <p>
+                <label for="opacity">투명도(0~100) : </label>
+                <input type="range" id="opacity" name="opacity" min="0" max="100">
+            </p>
+            
+ </fieldset>
+    </form>
+</body>
+</html>
