@@ -9,57 +9,57 @@
 <body>
 
  
-   <header>
+  <header>
        <h2>스마트폰</h2>
         <p>스마트폰은 컴퓨터를 결합한 무선 휴대전화기이다. PC에서 실행되는 운영체제보다 작게 만든 모바일 운영체제를 탑재하여 인터넷 검색, 전자우편, 간단한 문서 편집, 카메라, 오디오 및 비디오 재생 등 PC의 기능을 거의 모두 갖추고 있다.</p>
        
-       <audio src="media/audio.mp3" controls></audio>
-   </header>
+   <audio src="media/audio.mp3" controls></audio>
+  </header>
 
-    <hr>
+  <hr>
 
   
-   <nav>
-        h3>목차</h3>
+ <nav>
+       <h3>목차</h3>
        <ul>
-            <li><a href="#history">역사</a></li>
+           <li><a href="#history">역사</a></li>
             <li><a href="#android">안드로이드폰</a></li>
             <li><a href="#iphone">아이폰</a></li>
             <li><a href="#sample">샘플</a></li>
         </ul>
     </nav>
 
-    <hr>
+   <hr>
 
     
    <section>
-        <!-- 아티클 1: 역사 -->
-        <article id="history">
+
+  <article id="history">
             <h3>역사</h3>
             <p>최초의 스마트폰은 사이먼(Simon)으로 추정된다. IBM사가 1992년에 설계하여 그 해에 미국 네바다 주의 라스베이거스에서 열린 컴덱스에서 컨셉 제품으로 전시되었다.</p>
         </article>
 
-        <!-- 아티클 2: 안드로이드 -->
-        <article id="android">
-            <h3>안드로이드</h3>
+
+  <article id="android">
+           <h3>안드로이드</h3>
             <p>안드로이드(영어: Android)는 휴대 전화를 비롯한 휴대용 장치를 위한 운영체제와 미들웨어, 사용자 인터페이스 그리고 표준 응용 프로그램(웹 브라우저, 이메일 클라이언트, 단문 메시지 서비스 등)을 포함하고 있는 소프트웨어 스택이자 모바일 운영 체제이다.</p>
         </article>
 
-        <!-- 아티클 3: 아이폰 -->
-        <article id="iphone">
+
+  <article id="iphone">
             <h3>아이폰</h3>
             <p>아이폰(영어: iPhone)은 2007년 1월 9일, 애플이 발표한 휴대전화 시리즈이다. 미국 샌프란시스코 모스콘 센터에서 열린 맥월드 2007에서 애플의 창업자 중 한명인 스티브 잡스가 발표했다.</p>
         </article>
 
-        <!-- 아티클 4: 샘플 -->
-        <article id="sample">
+
+   <article id="sample">
             <h3>샘플</h3>
-            <!-- 이미지 태그 (실제 이미지가 없으므로 alt 텍스트가 표시됩니다) -->
-            <img src="media/smartphones.png" alt="스마트폰 샘플 이미지" width="300">
+    
+   <img src="media/smartphones.png" alt="스마트폰 샘플 이미지" width="300">
         </article>
     </section>
 
-    <hr>
+   <hr>
 
    
    <footer>
