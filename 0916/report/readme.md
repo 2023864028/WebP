@@ -69,3 +69,29 @@
 
 </body>
 </html>
+
+## 실습문제 01
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+  
+</head>
+<body>
+    <h3>버튼을 만들자</h3>
+    <hr>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button><br>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button><br>
+    <button>7</button>
+    <button>8</button>
+    <button>0</button>
+</body>
+</html>
+
+## 실습문제 02
+
