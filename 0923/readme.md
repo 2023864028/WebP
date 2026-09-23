@@ -30,3 +30,9 @@ span { color : blue; font-size : 20px; }
 <p>나는 <span>웹 프로그래밍</span>을 좋아합니다.</p>
 </body>
 </html>
+
+ 태그에 적용 가능한 스타일
+1. 브라우저의 디폴트 스타일
+2. 스타일 시트 파일에 선언된 스타일
+3. <style></style> 태그에 선언된 스타일
+4. style 속성에 선언된 스타일
