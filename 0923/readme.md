@@ -18,7 +18,6 @@
 <meta charset="utf-8">
 <title>스타일을 가진 웹 페이지</title>
 <style>
-/* CSS 스타일 시트 작성 */
 body { background-color : mistyrose; }
 h3 { color : purple; }
 hr { border : 5px solid yellowgreen; }
