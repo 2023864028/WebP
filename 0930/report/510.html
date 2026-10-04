@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션</title>
+    <style>
+        /* 슬라이딩 애니메이션 키프레임 정의 */
+        @keyframes slideIn {
+            from {
+                margin-left: 100%; /* 오른쪽 끝에서 시작 */
+            }
+            to {
+                margin-left: 0%;   /* 왼쪽 제자리로 도착 */
+            }
+        }
+
+        /* p 태그에 애니메이션 적용 */
+        .sliding-text {
+            /* 애니메이션 이름, 재생시간, 반복횟수 지정 */
+            animation-name: slideIn;
+            animation-duration: 3s; /* 3초에 걸쳐 진행 */
+            animation-iteration-count: 1; /* 1회만 진행 */
+            
+            /* 도착 후 그 자리에 머물도록 기본 마진을 0으로 설정 */
+            margin-left: 0%;
+            
+            /* 디자인을 위한 추가 스타일 (박스 형태) */
+            display: inline-block;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            white-space: nowrap; /* 글자가 줄바꿈 되지 않도록 함 */
+        }
+    </style>
+</head>
+<body>
+    <h3>애니메이션 응용</h3>
+    <hr>
+    <p class="sliding-text">❔ 질문 있습니다.</p>
+</body>
+</html>
