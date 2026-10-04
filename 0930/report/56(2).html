@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>어지러워요</title>
+    <style>
+        /* -90도에서 90도로 회전하는 애니메이션 정의[cite: 3] */
+        @keyframes swing {
+            from { transform: rotate(-90deg); }
+            to { transform: rotate(90deg); }
+        }
+        
+        img {
+            /* 왕복 애니메이션을 위해 alternate 사용. 0.5초 편도(왕복 1초)로 무한 반복[cite: 3] */
+            animation: swing 0.5s infinite alternate ease-in-out;
+            transform-origin: bottom center; /* 회전 중심을 아래쪽으로 두면 더 자연스럽습니다 */
+        }
+    </style>
+</head>
+<body>
+    <h3>어지러워요</h3>
+    <hr>
+    <img src="spongebob.png" alt="스폰지밥">
+</body>
+</html>
