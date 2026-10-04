@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>카푸치노 만들기</title>
+    <style>
+        /* 전체 리스트를 감싸는 점선 테두리 상자 */
+        .recipe-box {
+            border: 2px dotted #888;
+            padding: 15px;
+            width: 350px;
+        }
+
+        /* 내부 제목의 파선(dashed) 테두리 */
+        .recipe-box h3 {
+            border: 1px dashed #888;
+            padding: 5px;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        /* 기본 마커(숫자) 제거 및 여백 초기화 */
+        ol {
+            list-style-type: none; 
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 각 항목이 겹치지 않게 처리 */
+        li {
+            clear: both; /* float 속성 해제 */
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        /* 커스텀 숫자 스타일 (크게, 이탤릭체) */
+        span.num {
+            float: left; /* 왼쪽으로 띄워 텍스트와 나란히 배치 */
+            font-size: 2.5em;
+            font-weight: bold;
+            font-style: italic;
+            color: #777;
+            margin-right: 10px;
+            line-height: 1; /* 숫자 높이 맞춤 */
+        }
+
+        /* 텍스트 단락 스타일 */
+        p.desc {
+            float: left;
+            width: 280px; /* 숫자를 제외한 나머지 너비 */
+            margin: 0;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <h3>카푸치노</h3>
+    <hr>
+    
+    <div class="recipe-box">
+        <h3>카푸치노 만드는 순서</h3>
+        <ol>
+            <li>
+                <span class="num">1.</span>
+                <p class="desc">에스프레소를 추출한다. 반드시 에스프레소 콩을 사용해야 제맛이 난다.</p>
+            </li>
+            <li>
+                <span class="num">2.</span>
+                <p class="desc">적당한 용기에 우유를 넣어 중탕을 하거나 끓기 직전까지 데운다.</p>
+            </li>
+            <li>
+                <span class="num">3.</span>
+                <p class="desc">몇초간 저어 충분히 거품을 낸다. 거품이 충분하지 않으면 풍미가 떨어진다.</p>
+            </li>
+            <li>
+                <span class="num">4.</span>
+                <p class="desc">컵에 계피 막대를 꽂고 커피를 부은후 우유 거품을 붓는다. 휘핑크림을 얹고 계피가루를 뿌린다.</p>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
