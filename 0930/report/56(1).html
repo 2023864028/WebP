@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>어지러워요</title>
+    <style>
+        /* 360도 회전하는 애니메이션 정의 */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        img {
+            /* 1초(1s) 동안 spin 애니메이션을 무한번(infinite) 일정한 속도(linear)로 반복 */
+            animation: spin 1s infinite linear;
+        }
+    </style>
+</head>
+<body>
+    <h3>어지러워요</h3>
+    <hr>
+    <img src="spongebob.png" alt="스폰지밥">
+</body>
+</html>
