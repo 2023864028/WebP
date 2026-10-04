@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>전환 효과</title>
+    <style>
+        img {
+            width: 150px; /* 초기 이미지 크기 */
+            /* width 속성이 변경될 때 2초(2s)에 걸쳐 부드럽게 전환되도록 설정[cite: 3] */
+            transition: width 2s;
+        }
+        
+        /* 마우스를 올렸을 때 브라우저 폭(100%)으로 늘어남[cite: 3] */
+        img:hover {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>마우스를 올려봐요</h3>
+    <hr>
+    <img src="spongebob.png" alt="스폰지밥">
+</body>
+</html>
