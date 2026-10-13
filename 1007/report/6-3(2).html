@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>document.write()로 표만들기</title>
+</head>
+<body>
+    <h3>document.write()로 표만들기</h3>
+    <hr>
+    <script>
+        document.write("<table border='1' style='border-collapse: collapse;'>");
+        
+        // 첫 번째 줄 (n)
+        document.write("<tr>");
+        document.write("<td><b>n</b></td>");
+        for (let i = 0; i <= 9; i++) {
+            document.write("<td>" + i + "</td>");
+        }
+        document.write("</tr>");
+        
+        // 두 번째 줄 (n 제곱)
+        document.write("<tr>");
+        document.write("<td><b>n<sup>2</sup></b></td>");
+        for (let i = 0; i <= 9; i++) {
+            document.write("<td>" + (i * i) + "</td>");
+        }
+        document.write("</tr>");
+        
+        document.write("</table>");
+    </script>
+</body>
+</html>
