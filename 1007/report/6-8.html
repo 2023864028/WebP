@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>eval()로 수식 계산</title>
+</head>
+<body>
+    <h3>eval()로 수식 계산</h3>
+    <hr>
+    <script>
+        // prompt() 창을 띄워 사용자에게 수식을 입력받습니다.
+        let expression = prompt("수식 입력", "2+12*8-20/7");
+        
+        // 사용자가 취소를 누르거나 빈 값을 입력하지 않았을 경우에만 실행
+        if (expression !== null && expression !== "") {
+            // eval() 함수를 이용해 문자열로 된 수식을 계산합니다.
+            let result = eval(expression);
+            
+            // 화면에 입력된 수식과 계산 결과를 출력합니다.
+            document.write(expression + " = " + result);
+        } else {
+            document.write("수식이 입력되지 않았습니다.");
+        }
+    </script>
+</body>
+</html>
