@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>정수 5개 입력받아 역순으로 출력</title>
+</head>
+<body>
+<h3>정수 5개 입력받아 역순으로 출력</h3>
+<hr>
+<script>
+    let n = []; // 빈 배열 생성
+    for(let i=0; i<5; i++) {
+        // prompt 함수로 입력받아 배열에 순서대로 저장
+        n[i] = prompt("정수 입력"); 
+    }
+    
+    document.write("입력된 수의 배열<br>");
+    for(let i=0; i<5; i++) {
+        document.write(n[i] + " "); // 원래 배열 출력
+    }
+    
+    document.write("<hr>");
+    n.reverse(); // 배열의 순서를 역순으로 변경
+    
+    document.write("역순으로 재정렬된 배열<br>");
+    for(let i=0; i<5; i++) {
+        document.write(n[i] + " "); // 역순으로 변경된 배열 출력
+    }
+</script>
+</body>
+</html>
