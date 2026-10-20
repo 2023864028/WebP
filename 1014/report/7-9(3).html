@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>book 객체 만들기</title>
+</head>
+<body>
+<h3>book 객체 만들기</h3>
+<hr>
+<script>
+    // 생성자 함수(프로토타입) 작성
+    function Book(title, author, price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+
+    // new 연산자와 생성자 함수를 이용한 객체 생성
+    let book = new Book("HTML5", "황기태", 20000);
+
+    // 객체 출력
+    document.write("book : " + book.title + ", " + book.author + ", " + book.price);
+</script>
+</body>
+</html>
