@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>가로로 확대하기</title>
+    <script>
+        let scaleX = 1; // 초기 가로 배율 (1배)
+        function scaleImage(obj) {
+            scaleX++; // 클릭할 때마다 가로 배율 1 증가 (2, 3, 4...)
+            // scale(x배율, y배율) -> y배율은 1로 고정하여 세로는 유지
+            obj.style.transform = "scale(" + scaleX + ", 1)"; 
+            // 확대 기준점을 왼쪽(left)으로 설정하여 오른쪽으로만 늘어나게 할 경우 아래 코드 추가
+            // obj.style.transformOrigin = "left"; 
+        }
+    </script>
+</head>
+<body>
+    <h3>클릭하면 2,3,4배로 옆으로 늘어납니다.</h3>
+    <hr>
+    <img src="spongebob.png" alt="스폰지밥" onclick="scaleImage(this)">
+</body>
+</html>
