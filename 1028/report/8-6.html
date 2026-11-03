@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML</title>
+    <script>
+        function changeText(obj) {
+            // 사용자에게 텍스트를 입력받는 프롬프트 창 출력
+            let newText = prompt("HTML 텍스트 혹은 그냥 텍스트를 입력하세요", "");
+            
+            // 사용자가 '확인'을 누르고 입력값이 존재하는 경우에만 내용 변경
+            if (newText !== null) {
+                obj.innerHTML = newText;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>innerHTML</h3>
+    <hr>
+    <!-- p 태그 클릭 시 changeText 함수 호출, 자기 자신(this)을 전달 -->
+    <p onclick="changeText(this)" style="cursor: pointer;">이번 여름에는 어디로 여행을 갈까요?</p>
+</body>
+</html>
