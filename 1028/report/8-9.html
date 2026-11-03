@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>라면을 끓이는 순서</title>
+    <script>
+        function addStep(obj) {
+            // 사용자에게 순서를 입력받음
+            let step = prompt("라면을 끓이는 순서를 입력하라", "봉지에서 라면을 미리 꺼내 놓는다");
+            
+            // 취소를 누르지 않고 값이 입력된 경우에만 실행
+            if (step !== null && step !== "") {
+                let newLi = document.createElement("li"); // 새로운 <li> 요소 생성
+                newLi.innerHTML = step;                   // 입력받은 텍스트 삽입
+                obj.appendChild(newLi);                   // 클릭된 <ol> 객체의 자식으로 추가
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr>
+    <!-- 클릭 시 addStep 함수 호출 (자기 자신을 인자로 전달) -->
+    <ol type="A" style="background-color:yellowgreen" onclick="addStep(this)">
+        <li>물을 끓인다.</li>
+    </ol>
+</body>
+</html>
