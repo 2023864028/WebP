@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>갬블링 게임</title>
+    <style>
+        body {
+            font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+        }
+        .game-container {
+            background-color: #fef8e7; /* 연한 노란색/크림색 배경 */
+            border: 1px solid #d3d3d3;
+            width: 250px;
+            padding: 10px;
+        }
+        .number-box {
+            display: inline-block;
+            width: 60px;
+            height: 70px;
+            line-height: 70px;
+            font-size: 50px;
+            font-family: serif;
+            font-style: italic;
+            color: blue;
+            background-color: #e0d8e0; /* 연한 보라/회색 배경 */
+            text-align: center;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 15px;
+            font-style: italic;
+            color: purple;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        // 각 숫자의 클릭 여부를 추적하는 배열
+        let clicked = [false, false, false];
+
+        function changeNumber(index, element) {
+            // 이미 3개를 모두 클릭해 결과가 나온 상태라면 클릭 무시
+            if (clicked[0] && clicked[1] && clicked[2]) {
+                return;
+            }
+
+            // 0, 1, 2 중 랜덤한 난수 생성
+            let randomNum = Math.floor(Math.random() * 3);
+            
+            // 클릭한 박스의 숫자를 난수로 변경하고 클릭 상태 업데이트
+            element.innerHTML = randomNum;
+            clicked[index] = true;
+
+            // 3개 모두 클릭되었는지 검사
+            if (clicked[0] && clicked[1] && clicked[2]) {
+                checkResult();
+            }
+        }
+
+        function checkResult() {
+            let n0 = document.getElementById("num0").innerHTML;
+            let n1 = document.getElementById("num1").innerHTML;
+            let n2 = document.getElementById("num2").innerHTML;
+            let msgElement = document.getElementById("message");
+
+            // 3개의 숫자가 모두 같은지 비교
+            if (n0 === n1 && n1 === n2) {
+                msgElement.innerHTML = "Success(click here to do again)";
+            } else {
+                msgElement.innerHTML = "fail(click here to do again)";
+            }
+        }
+
+        function resetGame() {
+            // 텍스트를 초기값 0으로 되돌리고 메시지 삭제 및 클릭 상태 초기화
+            document.getElementById("num0").innerHTML = "0";
+            document.getElementById("num1").innerHTML = "0";
+            document.getElementById("num2").innerHTML = "0";
+            document.getElementById("message").innerHTML = "";
+            clicked = [false, false, false];
+        }
+    </script>
+</head>
+<body>
+    <h3>갬블링 게임</h3>
+    <p>각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.</p>
+    <hr>
+    
+    <div class="game-container">
+        <!-- 각 숫자를 클릭하면 changeNumber 함수가 실행됨 -->
+        <span class="number-box" id="num0" onclick="changeNumber(0, this)">0</span>
+        <span class="number-box" id="num1" onclick="changeNumber(1, this)">0</span>
+        <span class="number-box" id="num2" onclick="changeNumber(2, this)">0</span>
+    </div>
+    
+    <!-- 결과 메시지가 출력될 영역. 클릭 시 게임 초기화(resetGame) -->
+    <div id="message" onclick="resetGame()"></div>
+    
+</body>
+</html>
