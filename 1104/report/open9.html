@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스 클릭 연습</title>
+<style>
+    /* 표와 셀의 테두리 및 크기 설정 */
+    table {
+        border-collapse: collapse;
+    }
+    td {
+        border: 1px solid #ccc;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+</style>
+<script>
+    let currentIdx = -1; // 현재 이미지가 위치한 인덱스를 저장하는 변수
+
+    function moveImage() {
+        // 1. 기존에 이미지가 있던 셀을 비우고 클릭 이벤트 제거
+        if (currentIdx !== -1) {
+            document.images[currentIdx].src = "";
+            document.images[currentIdx].onclick = null; 
+        }
+
+        // 2. 0부터 99까지의 랜덤한 인덱스 생성 (10x10 = 100개)
+        currentIdx = Math.floor(Math.random() * 100);
+
+        // 3. 새로운 랜덤 위치에 이미지 출력 및 클릭 이벤트 연결
+        // ※ 'donkey.png' 대신 원하시는 이미지 파일명을 넣어도 됩니다.
+        document.images[currentIdx].src = "donkey.png";
+        document.images[currentIdx].onclick = moveImage;
+    }
+</script>
+</head>
+<!-- 웹 페이지가 로드될 때 onload 리스너로 moveImage() 함수를 최초 실행 -->
+<body onload="moveImage()">
+    <h3>마우스 클릭 연습</h3>
+    <hr>
+    
+    <script>
+        // 자바스크립트의 document.write()를 이용해 10x10 표를 동적으로 생성
+        document.write("<table>");
+        for (let i = 0; i < 10; i++) {
+            document.write("<tr>");
+            for (let j = 0; j < 10; j++) {
+                // 힌트에 따라 이미지가 없는 빈 <img> 태그를 각 셀에 삽입
+                document.write("<td><img src=''></td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>
