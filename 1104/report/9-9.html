@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아이템에 마우스를 올리면 설명 출력</title>
+<style>
+    /* 툴팁으로 사용할 div의 초기 스타일 (보이지 않게 설정) */
+    #infoDiv {
+        position: absolute;
+        visibility: hidden;
+        border: 1px solid yellowgreen;
+        background-color: aliceblue;
+        padding: 5px;
+        border-radius: 3px;
+        font-size: 0.9em;
+    }
+</style>
+<script>
+    // 마우스가 아이템 위로 올라왔을 때
+    function showInfo(e, text) {
+        let div = document.getElementById("infoDiv");
+        div.innerHTML = text; // 매개변수로 받은 텍스트를 div에 삽입
+        
+        // 마우스 포인터와 겹치지 않도록 좌표에 약간의 여백(+15)을 더함
+        div.style.left = (e.clientX + 15) + "px";
+        div.style.top = (e.clientY + 15) + "px";
+        
+        // div를 화면에 표시
+        div.style.visibility = "visible";
+    }
+    
+    // 마우스가 아이템에서 벗어났을 때
+    function hideInfo() {
+        let div = document.getElementById("infoDiv");
+        div.style.visibility = "hidden"; // div를 다시 숨김
+    }
+</script>
+</head>
+<body>
+    <h3>아이템에 마우스를 올리면 설명 출력</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <!-- onmouseover에 event 객체와 출력할 문자열을 함께 전달 -->
+        <li onmouseover="showInfo(event, '빨간자전거를 타고 서울, 대전, 대구, 부산 찍고, 목포, 인천을 거쳐 달린다')" onmouseout="hideInfo()">자전거로 대한민국 일주</li>
+        <li onmouseover="showInfo(event, '도서관에 가서 매일 한 권씩 읽는다')" onmouseout="hideInfo()">책 100권 읽기</li>
+        <li onmouseover="showInfo(event, '매일 수영, 자전거, 달리기 연습을 한다')" onmouseout="hideInfo()">철인 3종 경기 준비</li>
+        <li onmouseover="showInfo(event, '웹 프로그래밍 기초부터 고급까지 마스터한다')" onmouseout="hideInfo()">자바스크립트 정복</li>
+    </ul>
+    
+    <!-- 설명을 출력할 숨겨진 div 블록 -->
+    <div id="infoDiv"></div>
+</body>
+</html>
