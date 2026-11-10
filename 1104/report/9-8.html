@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>이벤트 객체의 target</title>
+<script>
+    let prevItem = null; // 이전에 클릭한 아이템을 기억하기 위한 변수
+
+    window.onload = function() {
+        // 모든 <li> 태그 요소를 배열 형태로 가져옴
+        let items = document.getElementsByTagName("li");
+        
+        for (let i = 0; i < items.length; i++) {
+            items[i].onclick = function() {
+                // 이전에 클릭된 아이템이 있다면 원래 크기로 복구
+                if (prevItem != null) {
+                    prevItem.style.fontSize = "1em";
+                }
+                // 현재 클릭된 아이템의 글자 크기를 1.3배로 확대
+                this.style.fontSize = "1.3em";
+                
+                // 현재 클릭된 아이템을 prevItem에 저장하여 다음에 활용
+                prevItem = this;
+            };
+        }
+    };
+</script>
+</head>
+<body>
+    <h3>아이템을 클릭하면 1.3배 크기로</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li>자전거로 대한민국 일주</li>
+        <li>책 100권 읽기</li>
+        <li>철인 3종 경기 준비</li>
+        <li>자바스크립트 정복</li>
+    </ul>
+</body>
+</html>
