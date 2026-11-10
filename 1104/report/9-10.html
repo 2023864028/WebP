@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기 만들기</title>
+<style>
+    /* 계산기 버튼과 입력창의 스타일 설정 */
+    button {
+        width: 60px;
+        height: 30px;
+        margin: 2px;
+    }
+    #display {
+        width: 260px;
+        padding: 5px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    table {
+        border-spacing: 0;
+    }
+</style>
+<script>
+    // 숫자 및 연산자 버튼 클릭 시 실행되는 함수
+    function inputChar(char) {
+        let display = document.getElementById("display");
+        // 초기 값이 0일 때, 0을 지우고 입력한 문자를 넣음
+        if (display.value === "0") {
+            display.value = char;
+        } else {
+            // 그 외에는 기존 수식 뒤에 문자를 추가
+            display.value += char;
+        }
+    }
+
+    // = 버튼 클릭 시 실행되는 계산 함수
+    function calculate() {
+        let display = document.getElementById("display");
+        try {
+            // eval() 함수를 사용하여 문자열 수식을 계산
+            display.value = eval(display.value);
+        } catch (e) {
+            display.value = "Error"; // 수식에 오류가 있을 경우
+        }
+    }
+
+    // BACK 버튼 클릭 시 실행되는 함수
+    function backspace() {
+        let display = document.getElementById("display");
+        // slice()를 이용하여 마지막 문자 하나를 잘라냄
+        display.value = display.value.slice(0, -1);
+        
+        // 다 지워져서 빈 문자열이 되면 다시 0을 출력
+        if (display.value === "") {
+            display.value = "0";
+        }
+    }
+
+    // CE, C 버튼 클릭 시 실행되는 초기화 함수
+    function clearDisplay() {
+        document.getElementById("display").value = "0";
+    }
+</script>
+</head>
+<body>
+    <h3>계산기 만들기</h3>
+    <hr>
+    
+    <!-- 계산기 화면 (초기값 0) -->
+    <input type="text" id="display" value="0" readonly>
+    
+    <!-- 버튼 배치를 위한 테이블 -->
+    <table>
+        <tr>
+            <td><button onclick="backspace()">BACK</button></td>
+            <td><button onclick="clearDisplay()">CE</button></td>
+            <td><button onclick="clearDisplay()">C</button></td>
+            <td><button onclick="calculate()">=</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputChar('7')">7</button></td>
+            <td><button onclick="inputChar('8')">8</button></td>
+            <td><button onclick="inputChar('9')">9</button></td>
+            <td><button onclick="inputChar('/')">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputChar('4')">4</button></td>
+            <td><button onclick="inputChar('5')">5</button></td>
+            <td><button onclick="inputChar('6')">6</button></td>
+            <td><button onclick="inputChar('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputChar('1')">1</button></td>
+            <td><button onclick="inputChar('2')">2</button></td>
+            <td><button onclick="inputChar('3')">3</button></td>
+            <td><button onclick="inputChar('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="inputChar('0')">0</button></td>
+            <td><button onclick="inputChar('+')">+</button></td>
+            <!-- NONE 버튼은 아무 기능이 없으므로 onclick 이벤트를 주지 않음 -->
+            <td><button>NONE</button></td>
+            <td><button>NONE</button></td>
+        </tr>
+    </table>
+</body>
+</html>
