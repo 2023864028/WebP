@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>산수 문제를 풀어 봅시다</title>
+    <style>
+        .question {
+            display: inline-block;
+            width: 80px;
+        }
+        .answer {
+            width: 60px;
+        }
+    </style>
+    <script>
+        function grade() {
+            let count = 0;
+            // 클래스 이름으로 문제와 정답 입력 칸 요소들을 가져옵니다.
+            let qArray = document.getElementsByClassName("question");
+            let aArray = document.getElementsByClassName("answer");
+
+            for (let i = 0; i < qArray.length; i++) {
+                let questionText = qArray[i].innerHTML; // 문제 수식 문자열
+                let correctAnswer = eval(questionText); // 수식 계산
+                let userAnswer = parseInt(aArray[i].value); // 사용자 입력값
+
+                // 정답 비교
+                if (userAnswer === correctAnswer) {
+                    count++;
+                    qArray[i].style.textDecoration = "none"; // 정답이면 선 없음
+                } else {
+                    qArray[i].style.textDecoration = "line-through"; // 오답이면 취소선
+                }
+            }
+            // 맞은 개수 출력
+            document.getElementById("score").innerHTML = count;
+        }
+    </script>
+</head>
+<body>
+    <h3>산수 문제를 풀어 봅시다.</h3>
+    <p>수식을 계산하여 답을 입력하고 채점 버튼을 누르세요.</p>
+    <hr>
+    <div><span class="question">5*6</span> <input type="text" class="answer"></div>
+    <div><span class="question">7+5*3</span> <input type="text" class="answer"></div>
+    <div><span class="question">23*2</span> <input type="text" class="answer"></div>
+    <div><span class="question">35-7</span> <input type="text" class="answer"></div>
+    <br>
+    <button type="button" onclick="grade()">채점</button>
+    <span id="score">0</span>
+</body>
+</html>
