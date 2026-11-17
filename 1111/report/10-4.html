@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>구글 Chrome 브라우저 감별</title>
+    <script>
+        function checkChrome() {
+            // 브라우저의 userAgent와 vendor 문자열을 가져옵니다.
+            let ua = navigator.userAgent;
+            let vendor = navigator.vendor;
+            
+            // 힌트에 따라 두 문자열에 각각 "Chrome"과 "Google Inc."가 포함되어 있는지 확인합니다.
+            if (ua.indexOf("Chrome") !== -1 && vendor.indexOf("Google Inc.") !== -1) {
+                alert("구글 Chrome 브라우저입니다.");
+            } else {
+                alert("크롬 브라우저가 아닙니다.");
+            }
+        }
+    </script>
+</head>
+<body onload="checkChrome()">
+    <h3>구글 Chrome 브라우저 감별</h3>
+    <hr>
+    <p>웹 브라우저에 따라 지원되는 자바스크립트들이 다를 수도 있습니다...</p>
+</body>
+</html>
