@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>샤갈의 눈 내리는 마을 만들기</title>
+    <style>
+        /* 교재에 제시된 배경 스타일 조건 */
+        body {
+            background-image: url("media/snow.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            
+            /* 브라우저 화면에 맞추기 위한 추가 스타일 */
+            margin: 0;
+            height: 100vh;
+            overflow: hidden; /* 눈송이가 화면 밖으로 나갈 때 스크롤바가 생기는 것 방지 */
+            background-color: #111; /* 이미지가 없을 때를 대비한 어두운 배경 */
+        }
+
+        /* 눈송이(div) 스타일 설정 */
+        .snow {
+            position: absolute;
+            color: white;
+            font-size: 24px;
+            text-shadow: 0 0 5px white; /* 눈송이가 살짝 빛나게 효과 */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const SNOW_COUNT = 30; // 눈송이 개수
+        const snowflakes = []; // 생성된 div 객체를 저장할 배열
+        const snowX = [];      // 각 눈송이의 x 좌표
+        const snowY = [];      // 각 눈송이의 y 좌표
+        const speed = [];      // 각 눈송이의 떨어지는 속도
+
+        // 1. 30개의 눈(div)을 만들어 랜덤한 위치에 배치
+        for (let i = 0; i < SNOW_COUNT; i++) {
+            let div = document.createElement("div");
+            div.innerHTML = "*";
+            div.className = "snow";
+            
+            // 브라우저 창 크기를 기준으로 랜덤 좌표 설정
+            let x = Math.floor(Math.random() * window.innerWidth);
+            let y = Math.floor(Math.random() * window.innerHeight);
+            
+            div.style.left = x + "px";
+            div.style.top = y + "px";
+            
+            document.body.appendChild(div); // 화면에 추가
+            
+            // 배열에 정보 저장
+            snowflakes[i] = div;
+            snowX[i] = x;
+            snowY[i] = y;
+            speed[i] = Math.random() * 3 + 2; // 떨어지는 속도 랜덤 (2~5 사이)
+        }
+
+        // 2. 눈이 내리는 효과를 만드는 함수
+        function fall() {
+            for (let i = 0; i < SNOW_COUNT; i++) {
+                snowY[i] += speed[i]; // y좌표를 증가시켜 아래로 이동
+                
+                // 눈송이가 화면 바닥에 닿거나 벗어나면 다시 맨 위로 이동
+                if (snowY[i] > window.innerHeight) {
+                    snowY[i] = 0; // y좌표를 0으로 초기화 (맨 위)
+                    snowX[i] = Math.floor(Math.random() * window.innerWidth); // x좌표도 새롭게 랜덤 배치
+                }
+                
+                // 갱신된 위치를 실제 태그에 적용
+                snowflakes[i].style.top = snowY[i] + "px";
+                snowflakes[i].style.left = snowX[i] + "px";
+            }
+        }
+
+        // 3. setInterval()을 이용해 일정 시간(40ms)마다 위치 갱신
+        setInterval(fall, 40);
+    </script>
+</body>
+</html>
