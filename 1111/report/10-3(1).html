@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>옵션 선택으로 사이트 접속</title>
+    <script>
+        function loadSite() {
+            let select = document.getElementById("site");
+            let url = select.options[select.selectedIndex].value;
+            
+            if (url !== "") {
+                // 두 번째 매개변수를 "_blank"로 지정하여 매번 새로운 창을 엽니다.
+                window.open(url, "_blank");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>옵션 선택으로 사이트 접속</h3>
+    <hr>
+    <p>옵션 선택 마다 새 윈도우에 접속합니다.</p>
+    <hr>
+    접속할 사이트
+    <select id="site" onchange="loadSite()">
+        <option value="">네이버</option> <!-- 기본 텍스트 역할 -->
+        <option value="https://www.naver.com">네이버</option>
+        <option value="https://www.google.co.kr">구글</option>
+        <option value="https://www.oracle.com">오라클</option>
+    </select>
+</body>
+</html>
