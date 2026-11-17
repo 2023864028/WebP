@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>산수 문제를 풀어 봅시다</title>
+    <style>
+        .question { display: inline-block; width: 80px; }
+        .answer { width: 60px; }
+    </style>
+    <script>
+        let timerId = null;
+        let timeLeft = 10; // 초기 남은 시간 설정
+
+        // 랜덤 문제 생성 및 타이머 시작
+        function generateProblems() {
+            let qArray = document.getElementsByClassName("question");
+            let aArray = document.getElementsByClassName("answer");
+            let operators = ["+", "-", "*", "/"];
+
+            for (let i = 0; i < qArray.length; i++) {
+                let num1 = Math.floor(Math.random() * 20) + 1;
+                let num2 = Math.floor(Math.random() * 20) + 1;
+                let opIndex = Math.floor(Math.random() * 4);
+                
+                qArray[i].innerHTML = num1 + operators[opIndex] + num2;
+                qArray[i].style.textDecoration = "none";
+                aArray[i].value = ""; 
+            }
+            document.getElementById("score").innerHTML = "0";
+
+            // 기존 타이머가 작동 중이면 중지하고 초기화
+            if (timerId !== null) {
+                clearInterval(timerId);
+            }
+            timeLeft = 10;
+            document.getElementById("timer").innerHTML = timeLeft;
+            
+            // 1초(1000ms)마다 카운트다운 함수 실행
+            timerId = setInterval(countdown, 1000);
+        }
+
+        // 카운트다운 및 자동 채점
+        function countdown() {
+            timeLeft--;
+            document.getElementById("timer").innerHTML = timeLeft;
+            
+            // 시간이 0이 되면 타이머를 멈추고 채점 함수 호출
+            if (timeLeft <= 0) {
+                clearInterval(timerId);
+                grade();
+            }
+        }
+
+        // 채점 함수
+        function grade() {
+            let count = 0;
+            let qArray = document.getElementsByClassName("question");
+            let aArray = document.getElementsByClassName("answer");
+
+            for (let i = 0; i < qArray.length; i++) {
+                let questionText = qArray[i].innerHTML;
+                let correctAnswer = Math.floor(eval(questionText)); 
+                let userAnswer = parseInt(aArray[i].value);
+
+                if (userAnswer === correctAnswer) {
+                    count++;
+                    qArray[i].style.textDecoration = "none";
+                } else {
+                    qArray[i].style.textDecoration = "line-through";
+                }
+            }
+            document.getElementById("score").innerHTML = count;
+        }
+    </script>
+</head>
+<body onload="generateProblems()">
+    <h3>산수 문제를 풀어 봅시다.</h3>
+    <p>문제는 자동으로 생성되며, 10초가 지나면 자동 채점됩니다.<br>
+    남은 시간 <span id="timer">10</span></p>
+    <hr>
+    <div><span class="question"></span> <input type="text" class="answer"></div>
+    <div><span class="question"></span> <input type="text" class="answer"></div>
+    <div><span class="question"></span> <input type="text" class="answer"></div>
+    <div><span class="question"></span> <input type="text" class="answer"></div>
+    <br>
+    <button type="button" onclick="generateProblems()">다시</button>
+    <span id="score">0</span>
+</body>
+</html>
