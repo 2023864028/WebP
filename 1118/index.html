@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>성준휘 | Software Portfolio</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  background: #f5f7fb;
+  color: #18243a;
+  line-height: 1.7;
+}
+header {
+  background: #101d33;
+  color: white;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo { font-size: 20px; font-weight: bold; }
+nav { display: flex; gap: 22px; }
+nav a { color: white; text-decoration: none; font-size: 14px; }
+nav a:hover { color: #79b8ff; }
+section { padding: 85px 9%; scroll-margin-top: 65px; }
+.hero {
+  background: linear-gradient(135deg,#142b4d,#2862a0);
+  color: white;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero small { color: #a9d3ff; letter-spacing: 3px; }
+.hero h1 { font-size: clamp(38px,6vw,64px); margin: 15px 0; }
+.hero p { color: #dce9f8; max-width: 550px; }
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 24px;
+  background: #fff;
+  color: #17385f;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  width: fit-content;
+}
+h2 { font-size: 30px; margin-bottom: 22px; }
+.subtitle { color: #718096; margin-bottom: 30px; }
+.about {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 800px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 18px;
+}
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e6eaf0;
+  transition: transform .2s;
+}
+.card:hover { transform: translateY(-4px); }
+.card h3 { margin-bottom: 10px; }
+.tag {
+  display: inline-block;
+  background: #eaf2ff;
+  color: #2862a0;
+  border-radius: 5px;
+  padding: 4px 9px;
+  font-size: 12px;
+  margin-top: 12px;
+}
+.status { color: #ad7721; font-size: 13px; }
+.log {
+  border-left: 3px solid #4384cf;
+  padding: 5px 0 25px 22px;
+  margin-left: 8px;
+}
+footer {
+  background: #101d33;
+  color: #dce9f8;
+  padding: 35px;
+  text-align: center;
+}
+.contact a { color: #2862a0; }
+@media(max-width:650px) {
+  header { padding: 15px 5%; flex-wrap: wrap; gap: 12px; }
+  nav { gap: 12px; flex-wrap: wrap; }
+  nav a { font-size: 12px; }
+  section { padding: 60px 6%; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">JUNHWI.DEV</div>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#log">LOG</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <small>SOFTWARE STUDENT PORTFOLIO</small>
+  <h1>Hello, I'm<br>Seong Junhwi.</h1>
+  <p>
+    안녕하세요. 경성대학교 소프트웨어학과 2학년
+    성준휘입니다.<br>
+    배우고, 도전하고, 성장하는 개발자가 되겠습니다.
+  </p>
+  <a class="btn" href="#about">나를 소개합니다 →</a>
+</section>
+
+<section id="about">
+  <h2>ABOUT ME</h2>
+  <p class="subtitle">저를 소개합니다.</p>
+  <div class="about">
+    <h3>안녕하세요. 성준휘입니다.</h3>
+    <p>
+      경성대학교 소프트웨어학과 2학년에 재학 중입니다.
+      소프트웨어와 프로그래밍을 공부하며
+      개발자로 성장하기 위한 기초를 쌓고 있습니다.
+    </p>
+    <br>
+    <p><b>관심 분야</b></p>
+    <p>소프트웨어 개발 · 인공지능 · 프롬프트 공학</p>
+    <br>
+    <p><b>나의 목표</b></p>
+    <p>
+      꾸준한 학습과 프로젝트 경험을 통해
+      스스로 문제를 해결하고 프로그램을 만드는
+      개발자가 되는 것입니다.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>MY SKILLS</h2>
+  <p class="subtitle">배우고 있는 기술과 학습 현황</p>
+  <div class="grid">
+    <div class="card">
+      <h3>HTML / CSS</h3>
+      <p>웹페이지 구조와 디자인</p>
+      <span class="tag">학습 예정</span>
+    </div>
+    <div class="card">
+      <h3>JavaScript</h3>
+      <p>웹페이지 동작과 기능 구현</p>
+      <span class="tag">학습 예정</span>
+    </div>
+    <div class="card">
+      <h3>Python</h3>
+      <p>프로그래밍과 문제 해결</p>
+      <span class="tag">학습 예정</span>
+    </div>
+    <div class="card">
+      <h3>AI & Prompt</h3>
+      <p>인공지능 활용과 프롬프트 설계</p>
+      <span class="tag">학습 시작</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>MY PROJECTS</h2>
+  <p class="subtitle">직접 만들고 완성할 프로젝트</p>
+  <div class="grid">
+    <div class="card">
+      <h3>01. Personal Website</h3>
+      <p>나만의 첫 번째 개인 홈페이지 제작</p>
+      <span class="tag">진행 중</span>
+    </div>
+    <div class="card">
+      <h3>02. Python Calculator</h3>
+      <p>Python으로 계산기 프로그램 만들기</p>
+      <span class="tag">진행 예정</span>
+    </div>
+    <div class="card">
+      <h3>03. Study Planner</h3>
+      <p>나의 공부 일정을 관리하는 프로그램</p>
+      <span class="tag">진행 예정</span>
+    </div>
+    <div class="card">
+      <h3>04. AI Prompt Project</h3>
+      <p>프롬프트 공학 실습과 결과물 정리</p>
+      <span class="tag">진행 예정</span>
+    </div>
+  </div>
+</section>
+
+<section id="log">
+  <h2>LEARNING LOG</h2>
+  <p class="subtitle">나의 학습 및 성장 기록</p>
+  <div class="log">
+    <h3>첫 번째 기록</h3>
+    <p>나만의 개인 포트폴리오 홈페이지 제작을 시작했습니다.</p>
+    <span class="status">2026.11 · 시작</span>
+  </div>
+  <div class="log">
+    <h3>앞으로의 계획</h3>
+    <p>HTML, CSS, JavaScript 기초를 배우고 첫 프로젝트를 완성할 예정입니다.</p>
+    <span class="status">학습 예정</span>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>CONTACT</h2>
+  <p class="subtitle">함께 배우고 성장하고 싶습니다.</p>
+  <p>성준휘 | Software Student</p>
+  <p>이메일: 본인의 이메일 주소를 입력하세요.</p>
+</section>
+
+<footer>
+  <p>© 2026 SEONG JUNHWI. All Rights Reserved.</p>
+  <p>Learning Today, Building Tomorrow.</p>
+</footer>
+
+</body>
+</html>
