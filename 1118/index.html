@@ -102,6 +102,68 @@ footer {
   nav a { font-size: 12px; }
   section { padding: 60px 6%; }
 }
+
+/* Calculator Design */
+.calculator-box {
+  background: white;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e6eaf0;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.calculator-box h3 {
+  margin-bottom: 20px;
+  color: #17385f;
+}
+
+.calculator-box input,
+.calculator-box select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #dce3ed;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+}
+
+.calculator-box button {
+  width: 100%;
+  padding: 14px;
+  background: #2862a0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.calculator-box button:hover {
+  background: #17385f;
+}
+
+.calculator-result {
+  margin-top: 25px;
+  padding: 20px;
+  background: #eaf2ff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.calculator-result p {
+  color: #718096;
+}
+
+.calculator-result h2 {
+  color: #2862a0;
+  margin: 5px 0 0;
+  font-size: 32px;
+}
+
 </style>
 </head>
 <body>
@@ -190,8 +252,8 @@ footer {
     </div>
     <div class="card">
       <h3>02. Python Calculator</h3>
-      <p>Python으로 계산기 프로그램 만들기</p>
-      <span class="tag">진행 예정</span>
+      <p>숫자를 입력하고 사칙연산을 할 수 있는 계산기</p>
+      <a href="#calculator" class="tag">계산기 실행하기 →</a>
     </div>
     <div class="card">
       <h3>03. Study Planner</h3>
@@ -202,6 +264,41 @@ footer {
       <h3>04. AI Prompt Project</h3>
       <p>프롬프트 공학 실습과 결과물 정리</p>
       <span class="tag">진행 예정</span>
+    </div>
+  </div>
+</section>
+
+<section id="calculator">
+  <h2>PYTHON CALCULATOR</h2>
+  <p class="subtitle">나만의 사칙연산 계산기</p>
+
+  <div class="calculator-box">
+    <h3>JUNHWI CALCULATOR</h3>
+
+    <input
+      type="number"
+      id="num1"
+      placeholder="첫 번째 숫자"
+    >
+
+    <select id="operator">
+      <option value="+">더하기 (+)</option>
+      <option value="-">빼기 (-)</option>
+      <option value="*">곱하기 (×)</option>
+      <option value="/">나누기 (÷)</option>
+    </select>
+
+    <input
+      type="number"
+      id="num2"
+      placeholder="두 번째 숫자"
+    >
+
+    <button id="calculateBtn">계산하기</button>
+
+    <div class="calculator-result">
+      <p>계산 결과</p>
+      <h2 id="result">0</h2>
     </div>
   </div>
 </section>
@@ -232,6 +329,51 @@ footer {
   <p>© 2026 SEONG JUNHWI. All Rights Reserved.</p>
   <p>Learning Today, Building Tomorrow.</p>
 </footer>
+<script>
 
+const num1 = document.getElementById("num1");
+const num2 = document.getElementById("num2");
+const operator = document.getElementById("operator");
+const result = document.getElementById("result");
+const calculateBtn = document.getElementById("calculateBtn");
+
+calculateBtn.addEventListener("click", function() {
+
+  const a = Number(num1.value);
+  const b = Number(num2.value);
+  const op = operator.value;
+
+  // 숫자 입력 확인
+  if (num1.value === "" || num2.value === "") {
+    result.textContent = "숫자를 입력하세요!";
+    return;
+  }
+
+  let answer;
+
+  // 사칙연산
+  if (op === "+") {
+    answer = a + b;
+  }
+  else if (op === "-") {
+    answer = a - b;
+  }
+  else if (op === "*") {
+    answer = a * b;
+  }
+  else if (op === "/") {
+    if (b === 0) {
+      result.textContent = "0으로 나눌 수 없습니다.";
+      return;
+    }
+    answer = a / b;
+  }
+
+  // 결과 출력
+  result.textContent = answer;
+
+});
+
+</script>
 </body>
 </html>
